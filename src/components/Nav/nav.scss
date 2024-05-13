@@ -1,0 +1,98 @@
+nav {
+  background-color: rgb(231, 231, 231);
+  display: flex;
+  align-items: center;
+  margin: 1rem 1rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.25rem;
+
+  h1 {
+    flex: 2;
+
+    @apply sm:text-[1.5rem] md:text-[2rem] xl:text-[2.5rem] font-bold cursor-pointer;
+  }
+  .links {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 500;
+    @apply hidden md:flex;
+    li {
+      cursor: pointer;
+    }
+  }
+  .buttons {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @apply gap-[1rem] sm:gap-[2rem];
+    button {
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      @apply text-[.5rem] sm:text-[.25rem] lg:text-[1rem] px-[.5rem] py-[.25rem] sm:p-[.5rem];
+      &:nth-child(1) {
+        background-color: skyblue;
+        &:hover {
+          background-color: rgb(47, 171, 219);
+        }
+      }
+      &:nth-child(2) {
+        background-color: lightgreen;
+        &:hover {
+          background-color: rgb(64, 231, 64);
+        }
+      }
+    }
+  }
+}
+
+.burger {
+  @apply md:hidden h-[1rem] w-[1rem] sm:h-[1.5rem] sm:w-[1.5rem] mr-[2rem] cursor-pointer;
+}
+
+.burger_menu {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  height: 100vh;
+  width: 50vw;
+  backdrop-filter: blur(0.2rem);
+  animation: moveRight 0.3s forwards;
+  @apply md:hidden;
+  ul {
+    margin-top: 1rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+    li {
+      cursor: pointer;
+    }
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  @apply h-[2rem] w-[2rem] sm:h-[3rem] sm:w-[3rem] md:h-[4rem] md:w-[4rem] xl:h-[5rem] xl:w-[5rem];
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@keyframes moveRight {
+  to {
+    transform: translateX(100%);
+  }
+}
