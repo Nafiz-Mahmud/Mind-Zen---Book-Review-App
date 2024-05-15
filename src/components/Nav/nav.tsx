@@ -1,11 +1,13 @@
 "use client";
 import "./nav.scss";
+import Link from "next/link";
 import { useState } from "react";
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const user = true;
   return (
     <nav>
+      <div className="top_bar"></div>
       {open && user && (
         <div className="burger_menu">
           <ul>
@@ -26,8 +28,9 @@ export default function Nav() {
           </svg>
         </div>
       )}
-
-      <h1>Mind Zen</h1>
+      <Link href="/">
+        <h1>Mind Zen</h1>
+      </Link>
       <ul className="links">
         <li>Home</li>
         <li>Reviews</li>

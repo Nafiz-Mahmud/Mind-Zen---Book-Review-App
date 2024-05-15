@@ -1,0 +1,231 @@
+.homepage {
+  .hero {
+    // background-color: rgba(255, 127, 80, 0.2);
+
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    @apply flex flex-col-reverse md:flex-row;
+    .hero_quote {
+      h1 {
+        @apply italic mb-[1rem] text-[.8rem] sm:text-[1.3rem] md:text-[1.3rem] lg:text-[1.5rem] xl:text-[1.8rem] 2xl:text-[2.5rem] font-bold;
+      }
+      p {
+        color: gray;
+        @apply text-[.8rem] sm:text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] xl:text-[1.5rem] 2xl:text-[2rem];
+      }
+    }
+    .hero_anime {
+      @apply h-[6rem] sm:h-[8rem] md:h-[12rem] xl:h-[15rem];
+      .anime {
+        height: 100%;
+      }
+    }
+  }
+  .by_genre {
+    width: 90%;
+    margin: auto;
+    h1 {
+      @apply text-gray-500 text-[1rem] sm:text-[1.5rem] md:text-[1.8rem] lg:text-[2rem] xl:text-[2.4rem] 2xl:text-[2.8rem] font-bold my-[1rem];
+    }
+    .genres {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      .genre {
+        background-color: rgba(135, 207, 235, 0.6);
+        @apply text-[.5rem] md:text-[.8rem] 2xl:text-[1.2rem] px-[.5rem] py-[.25rem] md:px-[1rem] md:py-[.5rem] hover:bg-blue-400 hover:scale-105 duration-300 md:font-bold rounded cursor-pointer;
+      }
+    }
+  }
+  .latest_reviews {
+    overflow-x: hidden;
+    h1 {
+      margin-left: 5%;
+      @apply text-gray-500 text-[1rem] sm:text-[1.5rem] md:text-[1.8rem] lg:text-[2rem] xl:text-[2.4rem] 2xl:text-[2.8rem] font-bold my-[1rem];
+    }
+    .review_card_section {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0rem;
+    }
+    .left_arrow,
+    .right_arrow {
+      font-size: 5rem;
+      cursor: pointer;
+    }
+
+    .reviews {
+      // background-color: coral;
+      display: flex;
+      gap: 1rem;
+      .review {
+        display: flex;
+        .review_img {
+          height: auto;
+          min-height: 14rem;
+          width: 12rem;
+          position: relative;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        .review_text {
+          // background-color: wheat;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          padding: 0.5rem 1rem;
+          min-width: 15rem;
+          color: gray;
+          h2 {
+            @apply text-[1.3rem] text-black font-bold;
+          }
+          .rating {
+            font-size: 1rem;
+            padding: 0.25rem 0.5rem;
+            font-weight: bold;
+            background-color: gold;
+            width: fit-content;
+            border-radius: 0.5rem;
+          }
+          .author,
+          .reviewer {
+            text-decoration: underline;
+            color: skyblue;
+          }
+          .counts {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+  .top_reviews {
+    overflow-x: hidden;
+    h1 {
+      margin-left: 5%;
+      @apply text-gray-500 text-[1rem] sm:text-[1.5rem] md:text-[1.8rem] lg:text-[2rem] xl:text-[2.4rem] 2xl:text-[2.8rem] font-bold my-[1rem];
+    }
+    .review_card_section {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0rem;
+    }
+    .left_arrow,
+    .right_arrow {
+      font-size: 5rem;
+      cursor: pointer;
+    }
+
+    .reviews {
+      // background-color: coral;
+      display: flex;
+      gap: 1rem;
+      .review {
+        display: flex;
+        .review_img {
+          height: auto;
+          min-height: 14rem;
+          width: 12rem;
+          position: relative;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        .review_text {
+          // background-color: wheat;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          padding: 0.5rem 1rem;
+          min-width: 15rem;
+          color: gray;
+          h2 {
+            @apply text-[1.3rem] text-black font-bold;
+          }
+          .rating {
+            font-size: 1rem;
+            padding: 0.25rem 0.5rem;
+            font-weight: bold;
+            background-color: gold;
+            width: fit-content;
+            border-radius: 0.5rem;
+          }
+          .author,
+          .reviewer {
+            text-decoration: underline;
+            color: skyblue;
+          }
+          .counts {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+  .top_authors {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1rem;
+    h1 {
+      @apply text-gray-500 text-[1rem] sm:text-[1.5rem] md:text-[1.8rem] lg:text-[2rem] xl:text-[2.4rem] 2xl:text-[2.8rem] font-bold my-[1rem];
+    }
+    .authors {
+      // display: flex;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      gap: 1rem;
+      .author {
+        display: flex;
+        box-shadow: 0.2rem 0.2rem 0.5rem gray;
+        border-radius: 0.25rem;
+        padding: 0.5rem;
+        gap: 1rem;
+        .author_img {
+          height: 10rem;
+          width: 10rem;
+          position: relative;
+          img {
+            padding: 0.5rem;
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        .author_text {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          color: gray;
+          h2 {
+            @apply text-[1.1rem] text-black font-bold;
+          }
+          button {
+            background-color: skyblue;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            width: fit-content;
+            border-radius: 1rem;
+            font-weight: 500;
+            color: black;
+            &:hover {
+              background-color: rgb(74, 184, 228);
+            }
+          }
+        }
+      }
+    }
+  }
+}
