@@ -156,7 +156,7 @@ export default function SingleReviewPage() {
           </div>
         </div>
         <div className="more_from_reviewer">
-          <h1>More from Reviewer</h1>
+          <h1>More from this Reviewer</h1>
           <div className="reviews">
             {reviews.map((review) => (
               <div className="review" key={review.id}>
