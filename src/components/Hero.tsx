@@ -3,8 +3,8 @@ export default function Hero() {
     <div className="hero">
       <div className="hero_quote">
         <h1>
-          If you don't like to read,
-          <br /> you haven't found the right book.
+          If you do not like to read,
+          <br /> you have not found the right book.
         </h1>
         <p>- J. K. Rowling</p>
       </div>
