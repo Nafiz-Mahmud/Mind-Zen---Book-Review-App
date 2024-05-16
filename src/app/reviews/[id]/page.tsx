@@ -187,7 +187,7 @@ export default function SingleReviewPage() {
         <h1>Recommanded</h1>
         <div className="reviews">
           {reviews.map((review) => (
-            <div className="review">
+            <div className="review" key={review.id}>
               <div className="review_img">
                 <Image
                   src="/to_kill.webp"
