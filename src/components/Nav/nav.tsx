@@ -1,6 +1,7 @@
 "use client";
 import "./nav.scss";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -39,7 +40,9 @@ export default function Nav() {
       </ul>
       {user ? (
         <button className="avatar">
-          <img src="/avatar.png" alt="" />
+          <div className="avatar_img"> 
+            <Image src="/avatar.png" alt="Avatar img" fill={true} />
+          </div>
         </button>
       ) : (
         <div className="buttons">

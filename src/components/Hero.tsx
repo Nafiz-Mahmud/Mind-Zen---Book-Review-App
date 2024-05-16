@@ -3,8 +3,8 @@ export default function Hero() {
     <div className="hero">
       <div className="hero_quote">
         <h1>
-          {`"`} If you don't like to read,
-          <br /> you haven't found the right book. {`"`}
+          <span>"</span> If you don't like to read,
+          <br /> you haven't found the right book. <span>"</span>
         </h1>
         <p>- J. K. Rowling</p>
       </div>
