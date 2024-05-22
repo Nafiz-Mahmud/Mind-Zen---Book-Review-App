@@ -1,10 +1,12 @@
 "use client";
 import "@/styles/write.scss";
 import { useState } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+// import ReactQuill from "react-quill";
+// import "react-quill/dist/quill.snow.css";
 import Image from "next/image";
 export default function WritePage() {
+  const [title, setTitle] = useState("");
+  const [author, setAuthor] = useState("");
   const [rating, setRating] = useState(0);
   const [value, setValue] = useState("");
   const [coverImg, setCoverImg] = useState("");
@@ -12,11 +14,11 @@ export default function WritePage() {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log({
-      title: e.target[0].value,
-      author: e.target[1].value,
+      title,
+      author,
       coverImg: coverImg,
       rating: rating,
-      review: value,
+      // review: value,
     });
   };
   return (
@@ -45,8 +47,18 @@ export default function WritePage() {
           id="cover_img"
           className="cover_img_input"
         />
-        <input className="title" type="text" placeholder="Title" />
-        <input className="author" type="text" placeholder="Author" />
+        <input
+          className="title"
+          type="text"
+          placeholder="Title"
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <input
+          className="author"
+          type="text"
+          placeholder="Author"
+          onChange={(e) => setAuthor(e.target.value)}
+        />
         <label htmlFor="select_rating" className="select_rating">
           Give A Rating
         </label>
@@ -61,12 +73,12 @@ export default function WritePage() {
           step={0.1}
         />
         <h2 className="rating">Rating : {rating}</h2>
-        <ReactQuill
+        {/* <ReactQuill
           theme="snow"
           value={value}
           placeholder="Write your review..."
           onChange={setValue}
-        />
+        /> */}
 
         <button>Post Review</button>
       </form>
