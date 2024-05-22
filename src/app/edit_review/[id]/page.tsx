@@ -1,13 +1,17 @@
 "use client";
-import "@/styles/write.scss";
+import "@/styles/editReviewPage.scss";
 import { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import Image from "next/image";
-export default function WritePage() {
-  const [rating, setRating] = useState(0);
-  const [value, setValue] = useState("");
-  const [coverImg, setCoverImg] = useState("");
+export default function EditReviewPage() {
+  const [title, setTitle] = useState("To Kill a Mocking Bird");
+  const [author, setAuthor] = useState("Harper Lee");
+  const [rating, setRating] = useState(3.5);
+  const [value, setValue] = useState(
+    "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quosimpedit, consequuntur, eos amet eligendi natus tempora vel facilis repudiandae et. Doloremque nostrum debitis laudantium assumenda, cum molestiae, sit architecto soluta, laborum reprehenderit odit? Harum quasminus asperiores dicta quidem sapiente recusandae deleniti quodexplicabo totam, atque nobis repudiandae commodi neque, eveniet, optiomagni quae possimus nostrum nemo repellendus rerum alias aliquam! Veluibusdam illo molestias quis beatae, nisi eaque enim sed architectovoluptas laudantium itaque sunt, explicabo ea odio? Dolor aliquamquibusdam dolorem tempore praesentium quis nobis impedit nostrum evenietdebitis soluta corrupti labore aut maxime dolore, enim hic."
+  );
+  const [coverImg, setCoverImg] = useState("/to_kill.webp");
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -21,7 +25,8 @@ export default function WritePage() {
   };
   return (
     <div className="write_page">
-      <h1>Write A Book Review!</h1>
+      <p></p>
+      <h1>Update This Review!</h1>
       <form onSubmit={handleSubmit}>
         {coverImg && (
           <div className="show_cover_img">
@@ -34,7 +39,7 @@ export default function WritePage() {
           </div>
         )}
         <label htmlFor="cover_img" className="cover_img">
-          Upload Cover Image
+          Change Cover Image
         </label>
         <input
           onChange={(e: any) =>
@@ -45,8 +50,18 @@ export default function WritePage() {
           id="cover_img"
           className="cover_img_input"
         />
-        <input className="title" type="text" placeholder="Title" />
-        <input className="author" type="text" placeholder="Author" />
+        <input
+          className="title"
+          type="text"
+          placeholder="Title"
+          value={title}
+        />
+        <input
+          className="author"
+          type="text"
+          placeholder="Author"
+          value={author}
+        />
         <label htmlFor="select_rating" className="select_rating">
           Give A Rating
         </label>

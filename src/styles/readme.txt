@@ -1,6 +1,5 @@
 done - Redesign Login/SignUp
 done - Write Page
-Update Review Page
-Update Profile
+done - Update Profile
+done - Update Review Page
 Fix Homepage Carousal
-Fix Nav
