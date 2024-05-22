@@ -10,7 +10,7 @@ export default function Nav() {
     <nav>
       <div className="top_bar"></div>
       {open && user && (
-        <div className="burger_menu">
+        <div className="burger_menu" style={{ zIndex: 99 }}>
           <ul>
             <li className="close" onClick={() => setOpen((prev) => !prev)}>
               X
@@ -35,14 +35,18 @@ export default function Nav() {
       <ul className="links">
         <li>Home</li>
         <li>Reviews</li>
-        <li>Write</li>
+        <Link href="/write">
+          <li>Write</li>
+        </Link>
         <li>About</li>
       </ul>
       {user ? (
         <button className="avatar">
-          <div className="avatar_img"> 
-            <Image src="/avatar.png" alt="Avatar img" fill={true} />
-          </div>
+          <Link href="user/1">
+            <div className="avatar_img">
+              <Image src="/avatar.png" alt="Avatar img" fill={true} />
+            </div>
+          </Link>
         </button>
       ) : (
         <div className="buttons">

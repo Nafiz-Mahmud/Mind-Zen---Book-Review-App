@@ -1,15 +1,15 @@
 .single_review {
   //   background-color: rgba(135, 207, 235, 0.2);
-  display: flex;
   width: 90%;
   margin: auto;
+  @apply flex flex-col md:flex-row;
   .left_side {
     flex: 3;
     margin-right: 1rem;
     .review {
       .review_top {
-        display: flex;
         gap: 2rem;
+        @apply flex flex-col sm:flex-row items-center;
         .review_img {
           height: 20rem;
           width: 15rem;
@@ -23,11 +23,10 @@
         .review_text {
           display: flex;
           flex-direction: column;
-          justify-content: space-around;
-
+          justify-content: space-between;
+          gap: 1rem;
           h1 {
-            font-size: 2rem;
-            font-weight: bold;
+            @apply text-[1.5rem] md:text-[1.2rem] lg:text-[1.5rem] xl:text-[2.2rem] 2xl:text-[2.8rem] font-bold;
           }
           p {
             color: blue;
@@ -37,14 +36,13 @@
           }
           .rating {
             cursor: none;
-            padding: 0.5rem 1rem;
             background-color: gold;
             color: black;
             text-decoration: none;
             font-weight: 500;
             width: fit-content;
             border-radius: 0.5rem;
-            font-size: 1.5rem;
+            @apply text-[.8rem] p-[.5rem] md:px-[1rem] xl:text-[1.5rem];
           }
           .view {
             color: gray;
@@ -61,6 +59,7 @@
         .review_body {
           margin-top: 2rem;
           color: gray;
+          @apply md:text-[1.5rem];
         }
       }
     }
@@ -68,8 +67,7 @@
       margin-top: 1rem;
       h1 {
         font-size: 2.5rem;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
+        @apply text-[1.5rem] md:text-[1.2rem] lg:text-[1.5rem] xl:text-[2.2rem] 2xl:text-[2.8rem] font-bold mb-[.5rem];
       }
       .write_comment {
         form {
@@ -105,16 +103,21 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        max-height: 30rem;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+
         .comment {
           display: flex;
           border-bottom: 0.1rem solid gray;
+          border-style: dotted;
           gap: 1rem;
-          padding: 1rem;
+          padding: 1rem 1rem 1rem 0;
           .comment_img {
             height: 5rem;
             width: 5rem;
             position: relative;
-            cursor: pointer;
+            @apply h-[3rem] w-[3rem] md:h-[5rem] md:w-[5rem] cursor-pointer;
           }
           img {
             border-radius: 50%;
@@ -133,6 +136,7 @@
             }
             p {
               color: gray;
+              padding-left: 0.5rem;
             }
           }
         }
@@ -141,8 +145,7 @@
     .more_from_reviewer {
       margin-top: 2rem;
       h1 {
-        font-size: 2rem;
-        font-weight: bold;
+        @apply text-[1.5rem] md:text-[1.2rem] lg:text-[1.5rem] xl:text-[2.2rem] 2xl:text-[2.8rem] font-bold mb-[.5rem];
       }
       .reviews {
         margin-top: 1rem;
@@ -154,9 +157,10 @@
         .review {
           box-shadow: 0.2rem 0.2rem 0.5rem gray;
           display: flex;
-          gap: 2rem;
+          @apply gap-[1rem] lg:gap-[2rem];
 
           .review_img {
+            min-width: 4rem;
             height: auto;
             width: 8rem;
             position: relative;
@@ -173,8 +177,8 @@
             padding: 1rem;
             gap: 0.5rem;
             h2 {
-              font-size: 1.5rem;
               font-weight: 500;
+              @apply text-[1.2rem] md:text-[1rem] lg:text-[1.2rem] xl:text-[2.2rem] 2xl:text-[2.8rem];
             }
             .rating {
               padding: 0.25rem 0.5rem;
@@ -222,6 +226,7 @@
         padding-bottom: 0.5rem;
         margin-bottom: 1rem;
         border-bottom: 0.1rem solid gray;
+        border-style: dashed;
         .review_img {
           height: 12rem;
           width: 8rem;

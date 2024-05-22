@@ -107,7 +107,7 @@ export default function SingleReviewPage() {
           </div>
         </div>
         <div className="comment_section">
-          <h1>Comments ( 3 )</h1>
+          <h1>Comments ( 6 )</h1>
           <div className="write_comment">
             <form>
               <input type="text" placeholder="Write a comment..." />
@@ -116,6 +116,42 @@ export default function SingleReviewPage() {
           </div>
 
           <div className="comments">
+            <div className="comment">
+              <div className="comment_img">
+                <Image src="/harper.jpg" alt="Harper Lee" fill={true} />
+              </div>
+              <div className="comment_text">
+                <h2>Harper Lee</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Veniam, inventore?
+                </p>
+              </div>
+            </div>
+            <div className="comment">
+              <div className="comment_img">
+                <Image src="/harper.jpg" alt="Harper Lee" fill={true} />
+              </div>
+              <div className="comment_text">
+                <h2>Harper Lee</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Veniam, inventore?
+                </p>
+              </div>
+            </div>
+            <div className="comment">
+              <div className="comment_img">
+                <Image src="/harper.jpg" alt="Harper Lee" fill={true} />
+              </div>
+              <div className="comment_text">
+                <h2>Harper Lee</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Veniam, inventore?
+                </p>
+              </div>
+            </div>
             <div className="comment">
               <div className="comment_img">
                 <Image src="/harper.jpg" alt="Harper Lee" fill={true} />

@@ -10,9 +10,10 @@ export default function ByGenre() {
     "romance",
     "sci-fi",
     "thriller",
-    "western",
     "biography",
     "documentary",
+    "tech",
+    "western",
     "history",
     "sport",
   ];

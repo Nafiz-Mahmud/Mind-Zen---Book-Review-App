@@ -1,0 +1,71 @@
+.write_page {
+  width: 90%;
+  margin: auto;
+
+  h1 {
+    text-align: center;
+    @apply text-[1rem] md:text-[1.5rem] lg:text-[2rem] xl:text-[2.5rem] 2xl:text-[3rem] mb-[2rem];
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    .show_cover_img {
+      height: 16rem;
+      width: 12rem;
+      position: relative;
+      margin-bottom: 2rem;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    input {
+      outline: none;
+    }
+    .cover_img {
+      padding: 0.5rem 1rem;
+      background-color: skyblue;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      width: max-content;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .cover_img_input {
+      display: none;
+    }
+    .title {
+      border-bottom: 0.1rem solid gray;
+      &:focus {
+        border-bottom: 0.1rem solid skyblue;
+      }
+      @apply my-[1rem] text-[1rem] md:text-[1.5rem] lg:text-[2rem] xl:text-[2.5rem] 2xl:text-[3rem] mb-[2rem];
+    }
+    .author {
+      border-bottom: 0.1rem solid gray;
+      &:focus {
+        border-bottom: 0.1rem solid skyblue;
+      }
+      @apply my-[1rem] text-[.8rem] md:text-[1.2rem] lg:text-[1.5rem] xl:text-[2rem] 2xl:text-[2.5rem] mb-[2rem];
+    }
+    .select_rating {
+      @apply my-[.5rem] text-[.8rem] md:text-[1.2rem] lg:text-[1.5rem] xl:text-[2rem] 2xl:text-[2.5rem] mb-[2rem];
+    }
+    .rating {
+      @apply my-[1rem] text-[.8rem] md:text-[1.2rem] lg:text-[1.5rem] xl:text-[2rem] 2xl:text-[2.5rem] mb-[2rem];
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      background-color: skyblue;
+      margin: 2rem auto;
+      font-weight: 500;
+      width: max-content;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+}
